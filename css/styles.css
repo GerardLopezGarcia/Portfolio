@@ -1,0 +1,298 @@
+:root {
+--base-font-family: 'IBM Plex Sans', sans-serif;
+--secondary-font-family: "IBM Plex Mono",monospace;
+
+--color-black: #080812;
+--color-dark-grey: #666;
+--color-mid-grey: #b0b0b0; /*per divisions i linies */ 
+--color-light-grey: #E9E9E9;
+--color-off-white: rgba(245,245,241,255); /* fondoo */ 
+--color-blue: rgb(115, 81, 251); /*  hover i seleccio */
+--color-light-blue: hsl(252, 76%, 95%);
+--base-spacing-body: 1.5rem;
+--large-spacing-body: calc var((--base-spacing-body)*2);
+--small-font-size: 0.75em;
+--base-font-size: 1em;
+--smedium-font-size: 1.333em;
+--medium-font-size: 1.777em;
+--large-font-size: 2.369em;
+--xlarge-font-size: 4.209em;
+--base-border-weight: 1px;
+--base-border: var(--base-border-weight) solid var(--base-border-color);
+--base-border-color: var(--tertiary-font-color);
+}
+
+
+
+body {
+    background-color: var(--color-off-white);
+    color: var(--color-black);
+    padding: calc(var(--base-spacing-body)*1.2);
+}
+
+/* HEADER- NAVIGATION BAR  */
+.header  {
+    font-size: 1rem;
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header a {
+    font-family: var(--base-font-family);
+    text-decoration: none;
+    color: var(--color-black);
+    margin: 10px;
+    background-color: transparent;
+    font-weight: 300;
+    
+}
+.header li {
+    list-style-type: none;
+    text-align: end;
+    font-family: var(--secondary-font-family);
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    
+}
+
+
+.header .is-active {
+    
+    border-bottom: solid 1px var(--color-dark-grey) ;
+}
+/*#navbar {
+        position: fixed;
+    top: 0; 
+    AIXO ES PER EL TEST!!
+}*/
+/* END OF HEADER */
+
+
+/* welcome section */
+.intro-body {
+    margin: calc(var(--base-spacing-body) * 6) 0 calc(var(--base-spacing-body) * 4);
+    height: 30vh;
+}
+
+.intro-body small {
+    margin-bottom: 40px;
+    font-family: var(--secondary-font-family);
+}
+
+.intro-body h1 {
+    font-family: 'IBM Plex Sans',sans-serif;
+    font-weight: 300;
+    line-height: 1.3;
+    margin-bottom: 32px;
+}
+ .underline {
+    border-top: solid 1px var(--color-mid-grey);
+    padding-top: 16px;
+    margin-bottom: 32px;
+}
+
+h2{
+    font-family: var(--secondary-font-family);
+    color: var(--color-black);
+    margin: 10px;
+    font-weight: 300;
+
+}
+
+.button {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 400;
+    padding: 16px 32px;
+    color: currentColor;
+    border: solid 1px var(--color-mid-grey);
+    border-radius: 50px;
+    background: 0 0;
+    text-decoration: none;
+}
+
+.text-meta {
+    font-size: var(--small-font-size);
+    font-family: var(--secondary-font-family);
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    font-weight: 400;
+    margin-bottom: 32px;
+}
+
+ a {
+    text-decoration: none;
+    color: var(--color-black);
+}
+
+/* ITEEMS */
+img {
+
+    /* display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    pointer-events: none;
+    border-style: none; */
+    border-radius: 0.5rem;
+    
+    
+}
+
+h3 {
+    /* font-family: var(--base-font-family); */
+    font-family: var(--secondary-font-family);
+    
+    font-size: 20px;
+}
+
+.project-title {
+    /* font-family: var(--secondary-font-family); */
+    font-family: var(--base-font-family);
+    line-height: 1.7;
+}
+
+
+.grid {
+    position: relative;
+    display: grid;
+    margin: 32px 0;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 2rem;
+    align-items: stretch;
+}
+
+
+
+
+@media (min-width:801px) {
+    /* FOTO 2/3 TEXT 1/3*/
+
+}
+@media (max-width:892px) {
+    /* foto 100% i text abaix */
+    .grid {
+        position: relative;
+        display: grid;
+        margin: 32px 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr 1fr;
+        grid-gap: 2rem;
+        align-items: stretch;
+    }
+    
+}
+/* END OF ITEMS */
+
+/* end welcome section  */
+
+
+#navbar a:hover {
+    color: var(--color-blue);
+    text-decoration: none;
+    /* background-color: var(--color-off-white);
+    border-top: solid 1px var(--color-blue); */
+}
+
+a:hover {
+    color: var(--color-blue);
+    text-decoration: none;
+}
+
+h3:hover{
+    color: var(--color-blue);
+    text-decoration: none;
+    
+}
+
+/*   ANIMACIÓ LINIA A SOTA  */
+
+.underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.underline-animation a::after, .underline-animation h3::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-blue);
+  transform-origin: bottom left;
+  transition: transform 0.4s ease-out;
+}
+.underline-animation a:hover:after,.underline-animation h3:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/*  FI ANIMACIÓ LINIA A SOTA  */
+
+/* .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+    
+} */
+
+
+
+/* footer  */
+
+.footer {
+    padding-top: 48px;
+    border-top: solid 1px var(--color-mid-grey);
+}
+
+p.p_foot {
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.footer small{
+    display: flex;
+    justify-content: center;
+}
+
+.p_foot a {
+    margin: 0 15px;
+    
+}
+.p_foot a:hover {
+    color: var(--color-blue);
+}
+
+p.i_foot {
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
+.i_foot i {
+    margin: 0 10px;
+    color: var(--color-dark-grey);
+}
+.i_foot i:hover {
+    color: var(--color-blue);
+    animation: none;
+}
+
+/* END OF THE FOOTER */
