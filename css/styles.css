@@ -189,6 +189,43 @@ h3 {
     }
     
 }
+
+@media only screen and (max-width: 500px) {
+    body{
+        padding: 16px;
+    }
+    .intro-body{
+        margin-top: 32px;
+    }
+
+    .header_nav a {
+        display: inline-block;
+        font-size: 0.5rem;
+        margin: 2px;
+    }
+    ul#menu.justify-content-end{
+        margin: 0;
+    }
+    a.header_title{
+        font-size: 0.8rem;
+        white-space: pre;
+        margin: 3px 0 3px 0;
+    }
+    h1 {
+        font-size: 1.8rem;
+        font-weight: bold ;
+    }
+
+    .grid {
+        position: relative;
+        display: grid;
+        margin: 32px 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.9fr 1fr;
+        grid-gap: 2rem;
+        align-items: stretch;
+    }
+}
 /* END OF ITEMS */
 
 /* end welcome section  */
