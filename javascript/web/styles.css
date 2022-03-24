@@ -1,0 +1,106 @@
+/* animation: blink 0.8s steps(1, start) infinite alternate;    blink animaciooo*/
+
+:root {
+    --base-font-family: 'IBM Plex Sans', sans-serif;
+    --secondary-font-family: "IBM Plex Mono",monospace;
+    
+    --color-black: #080812;
+    --color-dark-grey: #666;
+    --color-mid-grey: #b0b0b0; /*per divisions i linies */ 
+    --color-light-grey: #E9E9E9;
+    --color-off-white: rgba(245,245,241,255); /* fondoo */ 
+    --color-blue: rgb(115, 81, 251); /*  hover i seleccio */
+    --color-light-blue: hsl(252, 76%, 95%);
+    --base-spacing-body: 1.5rem;
+    --large-spacing-body: calc var((--base-spacing-body)*2);
+    --small-font-size: 0.75em;
+    --base-font-size: 1em;
+    --smedium-font-size: 1.333em;
+    --medium-font-size: 1.777em;
+    --large-font-size: 2.369em;
+    --xlarge-font-size: 4.209em;
+    --base-border-weight: 1px;
+    --base-border: var(--base-border-weight) solid var(--base-border-color);
+    --base-border-color: var(--tertiary-font-color);
+    }
+    
+
+body {
+    background: rgba(245,245,241,255);
+    font-family: var(--secondary-font-family);
+    font-weight: bold;
+    text-align: center;
+    position: relative;  
+}
+
+
+h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 50px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+h2#count-el {
+    color: var(--color-blue);
+}
+
+
+/* button {
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: black;
+    border: none;
+    font-weight: bold;
+    width: 200px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+} */
+
+button {
+
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 400;
+    padding: 16px 32px;
+    color: currentColor;
+    border: solid 1px var(--color-mid-grey);
+    border-radius: 50px;
+    background: 0 0;
+    text-decoration: none;
+}
+button:hover {
+    color: var(--color-blue);
+    text-decoration: none;
+}
+
+/* #increment-btn {
+    background: rgb(115, 81, 251);
+}
+
+#save-btn {
+    background: darkgreen;
+} */
+
+.centered {
+    margin: 8%;
+    position: relative;
+    top: 50%;
+}
+
+.underline {
+    border-top: solid 1px var(--color-mid-grey);
+    padding-top: 16px;
+    margin-bottom: 32px;
+
+}

@@ -20,7 +20,8 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;400&family=IBM+Plex+Sans:wght@200;300;400;500&display=swap" rel="stylesheet">
 
 </head>
-<body>
+<body id="body">
+  <div class="cursor"></div>
   <header class="header" role="banner">
     <a href="#" class="header_title">Gerard López García</a> 
     <nav id="navbar" class="header_nav" role="navigation">
@@ -63,9 +64,41 @@
             </a>
           </div>
           <div class="media__body">
-            <h3 >Netflix / Landing&nbsp;page </h3>
+            <h3> Netflix / Landing&nbsp;page </h3>
             <small class="text-meta">/ project</small>
             <p class="project-title">Landing page design project inspired by the famous platform and series producer.The aim of this project was to experiment with possible responsive layouts for a home page.</p>
+          </div>
+        </section>
+        
+        <section id="Chrome_Extension" class="grid grid-system">
+          <div id="div" class="media_item">
+            <a id="clickable">
+              <img  src="img/extension.png" alt="porject-image" >
+              
+            </a>
+          </div>
+          <div class="media_body">
+            <h3>Chrome / extension</h3>
+            <p class="project-title">This project builds a Crhome extension for tracking sales leads.It is a very useful extension for those who do an exhaustive search on the Internet and who want to select and save different links at the same time. Possible application: human resources profile search on linkedin <br>
+              <br>
+              {
+                "version": "1.0",
+            }
+            </p>
+            <br />
+            <a class="button" href="Chrome_Extension.rar" title="CHromeExt" download="Chrome_Extension.rar">Download </a>
+            
+          </div>
+        </section>
+        <section id="Javascript" class="grid grid-system">
+          <div class="media_item">
+            <a href="https://gerardlopezgarcia.github.io/javascript_exercices/">
+              <img src="img/js.png" alt="porject-image" >
+            </a>
+          </div>
+          <div class="media_body">
+            <h3>Jacascript / exercices</h3>
+            <p class="project-title">Three fun interactive projects wich incorporates javascript topics like DOM manipulation, localStorage, functions etc... Project range from a counter app to a Chrome extension </p>
           </div>
         </section>
         <section id="Tribute" class="grid grid-system">
@@ -90,6 +123,7 @@
             <p class="project-title">Technical documentation is a necessary practice in various industries. Such documents provide vital information to stakeholders, internal members, clients and end-users. In this case the project focuses on the Matlab program taking the basic functions and showing them to the user</p>
           </div>
         </section>
+        
         <section id="Survey" class="grid grid-system">
           <div class="media_item">
             <a href="https://gerardlopezgarcia.github.io/Survey-Form/">
@@ -98,14 +132,12 @@
           </div>
           <div class="media_body">
             <h3>/Survey&nbsp;form</h3>
-            <p class="project-title">A survey is a research method used for collecting data from a predefined group of respondents to gain information and insights into various topics of interest.Projecte pensat per la plataforma /freecodecamp</p>
+            <p class="project-title">A survey is a research method used for collecting data from a predefined group of respondents to gain information and insights into various topics of interest.</p>
           </div>
         </section>
         
         
         
-        
-       
         
         
       </div>
@@ -145,6 +177,6 @@
   <script src="js/bootstrap.min.js"></script>
   <!--<script src="js/ajax-utils.js"></script>
   <script src="js/script.js"></script>-->
-  
+  <script src="js/script.js"></script>
 </body>
 </html>

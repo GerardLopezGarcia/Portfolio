@@ -1,0 +1,68 @@
+:root {
+--base-font-family: 'IBM Plex Sans', sans-serif;
+--secondary-font-family: "IBM Plex Mono",monospace;
+
+--color-black: #080812;
+--color-dark-grey: #666;
+--color-mid-grey: #b0b0b0; /*per divisions i linies */ 
+--color-light-grey: #E9E9E9;
+--color-off-white: rgba(245,245,241,255); /* fondoo */ 
+--color-blue: rgb(115, 81, 251); /*  hover i seleccio */
+--color-light-blue: hsl(252, 76%, 95%);
+--base-spacing-body: 1.5rem;
+--large-spacing-body: calc var((--base-spacing-body)*2);
+--small-font-size: 0.75em;
+--base-font-size: 1em;
+--smedium-font-size: 1.333em;
+--medium-font-size: 1.777em;
+--large-font-size: 2.369em;
+--xlarge-font-size: 4.209em;
+--base-border-weight: 1px;
+--base-border: var(--base-border-weight) solid var(--base-border-color);
+--base-border-color: var(--tertiary-font-color);
+}
+
+body {
+    border: solid 1px #666 ;
+    margin: 0;
+    padding: 10px;
+    font-family: var(--secondary-font-family);
+    min-width: 400px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid  #080812;;
+    margin-bottom: 4px;
+}
+
+button {
+    background:  #080812;;
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid  #080812;;
+    font-weight: bold;
+}
+
+#delete-btn {
+    background: white;
+    color:  #080812;;
+}
+
+ul {
+    margin-top: 20px;
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    margin-top: 5px;
+}
+
+a {
+    color: #080812;;
+}
+
+

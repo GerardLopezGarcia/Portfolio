@@ -246,6 +246,7 @@ a:hover {
 h3:hover{
     color: var(--color-blue);
     text-decoration: none;
+    cursor:pointer;
     
 }
 
