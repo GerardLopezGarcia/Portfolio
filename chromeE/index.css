@@ -26,8 +26,9 @@ body {
     border: solid 1px #666 ;
     margin: 0;
     padding: 10px;
+    height: 190px;
     font-family: var(--secondary-font-family);
-    min-width: 400px;
+    
 }
 
 input {

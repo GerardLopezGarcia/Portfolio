@@ -133,6 +133,8 @@ h2{
 }
 
 /* ITEEMS */
+
+
 img {
 
     /* display: block;
@@ -193,6 +195,9 @@ h3 {
 @media only screen and (max-width: 500px) {
     body{
         padding: 16px;
+    }
+    #Chrome_Extension {
+        grid-template-rows: 0.2fr 1fr;
     }
     .intro-body{
         margin-top: 32px;
