@@ -189,6 +189,9 @@ h3 {
         grid-gap: 2rem;
         align-items: stretch;
     }
+    #Chrome_Extension {
+        grid-template-rows: 0.2fr 1fr;
+    }
     
 }
 
