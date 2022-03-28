@@ -171,7 +171,14 @@ h3 {
     align-items: stretch;
 }
 
-
+/* .logos{
+    
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+    
+    
+} */
 
 
 @media (min-width:801px) {

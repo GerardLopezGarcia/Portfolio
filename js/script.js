@@ -1,5 +1,5 @@
 let  sections = document.getElementById("clickable")
-let  out = document.getElementById("body")
+
 
 sections.addEventListener("click",function changeMe(){
     sections.innerHTML = `<iframe src="chromeE\\index.html" frameborder="0" width="100%"height="190px"></iframe>`
@@ -9,7 +9,7 @@ sections.addEventListener("click",function changeMe(){
       
 });
 
-out.addEventListener("mouseout",function () {
+addEventListener("scroll",function () {
     sections.innerHTML = `<img  src="img/extension.png" alt="porject-image" >`
     console.log("sfgsdfgsdf")
 })

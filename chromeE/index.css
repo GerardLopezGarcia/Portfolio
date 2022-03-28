@@ -23,12 +23,25 @@
 }
 
 body {
-    border: solid 1px #666 ;
+    /* border: solid 1px #666 ; */
     margin: 0;
     padding: 10px;
-    height: 190px;
+    height: 300px;
     font-family: var(--secondary-font-family);
     
+}
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+}
+  
+body::-webkit-scrollbar-track {
+    background:rgba(245,245,241,255)        /* color of the tracking area */
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color:  #080812;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid rgba(245,245,241,255)  /* creates padding around scroll thumb */
 }
 
 input {
