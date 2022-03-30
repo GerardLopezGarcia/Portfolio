@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gerard_Lopez_Portfolio</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;400&family=IBM+Plex+Sans:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+</head>
+<body >
+  <div class="cursor"></div>
+  <header class="header" role="banner">
+    <a href="#" class="header_title">Gerard López García</a> 
+    <nav id="navbar" class="header_nav" role="navigation">
+      <!-- aqui pots posar el botó colapsable -->
+      <ul id="menu"  class="justify-content-end">
+        <li class="nav-item d-inline-block underline-animation">
+          <a href="index.html" title="Projects" >/intro</a>
+        </li>
+        <li class="nav-item d-inline-block underline-animation">
+          <a href="#footer" title="Section1">projects</a>
+        </li>
+        <li class="nav-item d-inline-block underline-animation">
+          <a href="#footer" title="Section2">section</a>
+        </li >
+        <li class="nav-item d-inline-block underline-animation">
+          <a href="https://www.linkedin.com/in/gerardlopezgarcia" title="ContactMe">contact</a>
+        </li>
+      </ul>
+    </nav>
+    
+  </header>
+  <!-- end of the header! -->
+  <!-- <div class="main">
+    <div class="intro-body">
+      <small>/PROJECTS</small>
+      <h1>...</h1>
+      
+      <button class="button">More about me</button>
+      
+    </div>
+    <div class="underline"></div> -->
+    <section id="projects">
+      <h2 class="text-meta "> Featured / <li class="underline-animation"><a href="/work/">work</a></li> </h2>
+      <!-- aqui van els projectees -->
+      <div>
+        <section id="OpenWeather" class="grid grid-system">
+            <div class="media_item" id="ClickMe"> 
+                <!-- aqui anava un ancor -->
+                  <img  id ="imagen" src="img/weather.png" alt="porject-image" >
+              </div>
+            <div class="media_body">
+              <h3>OpenWeather / API</h3>
+              <p class="project-title">Fun weather app linked to the Open Weather API to acces current weather data for any location over 200.000 cities. This app was made using JSON, XML, HTML and Bootstrap  </p>
+            </div>
+          </section>
+          <section id="Survey" class="grid grid-system">
+            <div class="media_item">
+              <a href="https://gerardlopezgarcia.github.io/Survey-Form/">
+                <img src="img/survey.png" alt="porject-image" >
+              </a>
+            </div>
+            <div class="media_body">
+              <h3>/Survey&nbsp;form</h3>
+              <p class="project-title">A survey is a research method used for collecting data from a predefined group of respondents to gain information and insights into various topics of interest.</p>
+            </div>
+          </section>
+        
+        
+        
+        
+        
+      </div>
+      <!-- final de seccio projectes -->
+    </section>
+  </div>
+  <!-- end of the MAIN -->
+  
+  <!-- <div class="underline"></div>
+  <div class="media_item logos">
+    <img src="img/languages.png" alt="languajes" >
+  </div> -->
+
+  <footer id="footer" class="footer">
+    <!-- TEXT LINK -->
+    <p class="p_foot">
+      <a href="https://www.linkedin.com/in/gerardlopezgarcia" target="_blank">LINKEDIN</a>
+      <a id="profile-link" href="https://github.com/GerardLopezGarcia" target="_blank">GITHUB</a>
+      <a href="https://www.instagram.com/gerardlpzgarcia/" target="_blank">INSTAGRAM</a>
+      <a href="https://codepen.io/rlploters " target="_blank">CODEPEN</a>
+    </p>   
+    <!-- LOGOS -->
+    <p class="i_foot">
+
+      <a href="https://www.linkedin.com/in/gerardlopezgarcia" target="_blank"><i class="fa fa-linkedin fa-lg fa-shake" aria-hidden="true"></i></a>
+      
+      <a id="profile-link" href="https://github.com/GerardLopezGarcia" target="_blank"><i class="fa fa-github fa-lg fa-spin" aria-hidden="true"></i></a>
+
+      <a href="https://www.instagram.com/gerardlpzgarcia/" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
+
+      <a href="https://codepen.io/rlploters"><i class="fa fa-codepen fa-lg" aria-hidden="true"></i></a>
+
+    </p>
+  
+    <small class="s_foot">© Made by Gerard López García · 2022</small>
+  </footer>
+  
+
+
+<!-- jQuery (Bootstrap JS plugins depend on it) -->
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!--<script src="js/ajax-utils.js"></script>
+  <script src="js/script.js"></script>-->
+  <script src="js/script.js"></script>
+  <script>
+    //   var width = document. getElementById('imagen'). style. width.value;
+    //   var height = document. getElementById('imagen'). style. height.value;
+    //   console.log(width,height)
+    var element = document.getElementById('imagen');
+    var positionInfo = element.getBoundingClientRect();
+    var height = positionInfo.height;
+    var width = positionInfo.width;
+    console.log(height,width)
+      let api = document.getElementById("ClickMe")
+      console.log(api)
+      api.addEventListener("click",function (){
+        api.innerHTML = `<iframe src="Weather_Api\\index_weatherAPI.html" frameborder="0" width="${width}"height="${height}"></iframe>`
+        
+      })
+      addEventListener("scroll",function () {
+        api.innerHTML = `<img  src="img/weather.png" alt="porject-image" >`
+      })   
+  </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Weather api </title>
+    <!--Boostrap cdn-->
+    <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body >  
+    
+    <div class="jumbotron text-center" style="margin-bottom:5">
+        <h1>Weather API</h1>
+        <br>
+        <form action="#">
+          <div class="input-group">
+            <div class="input-group-append">
+              <span class="input-group-text"> 
+                <i class="fa fa-search" onclick="onClick()"></i></span>
+            </div>
+            <input type="text" class="form-control" onkeypress="onClick()"  placeholder="Type any city" id="city name" name="city_name">
+          </div>
+        </form>
+      </div>
+      
+    <div class="container" style="margin-top:30px">
+        <div class="row ">
+            <div class="col-sm-12 text-center">
+                <div class="weather-icon"><img src="http://openweathermap.org/img/wn/50d@2x.png"></div>
+                <div class="temperature-value"><p>º<span>C</span></p></div>
+                <div class="temperature-description"><p> - </p></div>
+                <div class="location"><p>-</p></div>
+                <br>
+            
+            </div>
+
+              <div class=" ">
+                  <ul id="tiempo">
+                    
+                  </ul>
+              </div>
+                   
+        </div>
+
+      </div>
+      <script src="/styles_weather.css"></script>
+      <script>
+        
+        // Select Elements
+        const iconElement = document.querySelector(".weather-icon");
+        const tempElement = document.querySelector(".temperature-value p");
+        const descElement = document.querySelector(".temperature-description p");
+        const locElement = document.querySelector(".location p");
+
+        function onClick(event) {
+          
+
+  	     
+          //API
+          var city_name = document.getElementById("city name").value;
+          var xmlHttp = new XMLHttpRequest();
+          var API_key = "31b5e1b96c34cfc1115023b484d6000e"
+          let url = `https://api.openweathermap.org/data/2.5/weather?q=${city_name}&APPID=${API_key}`
+          xmlHttp.open( "GET", url, false ); 
+          xmlHttp.send( null );
+
+          //Resposta en consola
+          var response = JSON.parse(xmlHttp.responseText);
+          console.log(xmlHttp.responseText);
+          console.log(response["main"]["temp"]);
+          
+          //data 
+          var temp = response["main"]["temp"];
+          var Kelvin = 273
+          var temperature = Math.floor(temp - Kelvin);
+          var description = response["weather"][0]["description"];
+          var iconID = response["weather"][0]["icon"];
+          
+          //data resposta
+          
+          iconElement.innerHTML = `<img src="http://openweathermap.org/img/wn/${iconID}@2x.png" >`;
+          tempElement.innerHTML = `${temperature} º<span>C</span>`
+          descElement.innerHTML = description;
+          locElement.innerHTML = city_name;
+          
+          
+         
+          //var node = document.createElement("H1");                 
+          //var textnode = document.createTextNode(temperature);        
+          //node.appendChild(textnode);                              
+          //document.getElementById("tiempo").appendChild(node);
+          
+
+        };
+        
+        
+        // function animation() {
+        //   var a = document.getElementById("charging");
+        //   ic.innerHTML = "&#xf185  &#xf186;";
+        //   setTimeout(function() {
+        //     ic.innerHTML = "&#xf753 &#xf73c &#xf75f;";
+        //   },2000);
+        // };
+        
+        // animation();
+        // setInterval(animation, 3000);
+
+    
+      </script>
+    
+    <div class="jumbotron text-center" style="margin-bottom:0">
+      <div id="charging" class="fa">&#xf185  &#xf186</div>
+    </div>
+    
+</body>
+</html>

@@ -1,3 +1,5 @@
+/* animation: blink 0.8s steps(1, start) infinite alternate;    blink animaciooo*/
+
 :root {
     --base-font-family: 'IBM Plex Sans', sans-serif;
     --secondary-font-family: "IBM Plex Mono",monospace;
@@ -102,8 +104,3 @@ button:hover {
     margin-bottom: 32px;
 
 }
-canvas {
-    border: 1px solid black;
-    width: 560px;
-    height: 360px;
-  }
