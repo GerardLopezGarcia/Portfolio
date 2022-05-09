@@ -4,7 +4,7 @@ var heights = positionInfos.height;
 var widths = positionInfos.width;
 console.log(heights,widths)
 let  sections = document.getElementById("clickable")
-
+let map = document.getElementById("mapper")
 
 sections.addEventListener("click", function changeMe (){
     sections.innerHTML =`<iframe src="chromeE\\index.html" frameborder="0" width="${heights}"height="${heights}"></iframe>`
@@ -17,6 +17,8 @@ addEventListener("scroll",function () {
     sections.innerHTML = `<img  src="img/extension.png" alt="porject-image" >`
     console.log("sfgsdfgsdf")
 })
+
+
 
 // let api = document.getElementById("ClickMe")
 // console.log(api)
