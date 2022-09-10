@@ -147,6 +147,9 @@ img {
     
     
 }
+img#doggy{
+    border: solid 5px #f1b999e1;
+}
 
 h3 {
     /* font-family: var(--base-font-family); */
